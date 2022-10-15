@@ -39,8 +39,13 @@
 (onemorep 7 3)
  ; => NIL
 
-(defun average (n p)
-    (+ n p) / 2)
+(defun sum (n p)
+  (+ n p))
 
-(average 100 50)
- ; => 2 (2 bits, #x2, #o2, #b10)
+(defun div-2 (x)
+  (/ x 2))
+
+(defun average (n p)
+  (div-2 (sum n p)))
+
+(average 10 20)
