@@ -49,3 +49,38 @@
   (div-2 (sum n p)))
 
 (average 10 20)
+
+(not nil)
+ ; => T
+(not t)
+ ; => NIL
+(not '())
+ ; => T
+
+(defun not-onep (n)
+    (not (equalp 1 n)))
+ ; => NOT-ONEP
+
+(not-onep 99)
+ ; => T
+
+;; returns T when one of its inputs is NIL and the other is t
+;; (defun return-t (n p)
+;;   (not (equalp nil t)))
+
+;;  ; => T
+;; ;; but returns NIL when both are nil or both are T
+;; (defun return-nil (n p) (equalp nil t))
+
+;; (defun xor (n p)
+;;   (return-t return-nil (n p)))
+
+;; (xor nil t)
+
+(defun xor (x y)
+  (not equal (x y)))
+
+(xor nil t)
+
+(/ 4)
+ ; => 1/4 (0.25, 25%)
